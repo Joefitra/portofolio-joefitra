@@ -175,8 +175,8 @@ export default function App() {
                   Mengelola akun media sosial instagram @triguna_dharma dan akun tiktok @cerita.indonesiaai
                 </p>
                 <div className="flex gap-2 text-xs font-medium text-slate-500">
-                  <span target="_blank" className="bg-slate-800 px-2 py-1 rounded"><a href="https://www.instagram.com/triguna_dharma/">Instagram</a></span>
-                  <span target="_blank" className="bg-slate-800 px-2 py-1 rounded"><a href="https://www.tiktok.com/@cerita.indonesiaai">Tiktok</a></span>
+                  <span className="bg-slate-800 px-2 py-1 rounded"><a href="https://www.instagram.com/triguna_dharma/" target="_blank">Instagram</a></span>
+                  <span className="bg-slate-800 px-2 py-1 rounded"><a href="https://www.tiktok.com/@cerita.indonesiaai" target="_blank">Tiktok</a></span>
                 </div>
               </div>
 
