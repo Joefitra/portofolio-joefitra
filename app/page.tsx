@@ -6,6 +6,9 @@ import {
   Palette,
   LineChart,
   GraduationCap,
+  Video,
+  Music2,
+  Camera,
   ArrowRight,
   ExternalLink,
   Mail,
@@ -59,7 +62,7 @@ export default function App() {
         {/* Hero Section */}
         <section id="beranda" className="pt-40 pb-20 px-6 min-h-[90vh] flex flex-col justify-center items-center text-center">
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium">
-            S1 & S2 Teknologi Informasi 🎓
+            S1 Sistem Informasi & S2 Teknologi Informasi 🎓
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 max-w-4xl leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
@@ -138,6 +141,11 @@ export default function App() {
                 <div className="flex flex-wrap gap-2 text-xs font-medium text-slate-500">
                   <span className="bg-slate-800 px-2 py-1 rounded">Machine Learning</span>
                   <span className="bg-slate-800 px-2 py-1 rounded">NLP</span>
+                  <span className="bg-slate-800 px-2 py-1 rounded">Text Mining</span>
+                  <span className="bg-slate-800 px-2 py-1 rounded">Data Mining</span>
+                  <span className="bg-slate-800 px-2 py-1 rounded">DSS</span>
+                  <span className="bg-slate-800 px-2 py-1 rounded">AI</span>
+                  <span className="bg-slate-800 px-2 py-1 rounded">Expert System</span>
                 </div>
               </div>
 
@@ -151,8 +159,42 @@ export default function App() {
                   "Mentransfer pengetahuan." Mengajar ilmu komputer dengan metode hybrid agar materi mudah dipraktikkan.
                 </p>
                 <div className="flex gap-2 text-xs font-medium text-slate-500">
-                  <span className="bg-slate-800 px-2 py-1 rounded">S1 Mahasiswa</span>
+                  <span className="bg-slate-800 px-2 py-1 rounded">Mahasiswa S1</span>
                   <span className="bg-slate-800 px-2 py-1 rounded">Hybrid Method</span>
+                </div>
+              </div>
+
+              {/* Card 5 */}
+              <div className="bg-slate-900 p-8 rounded-3xl border border-slate-800 hover:border-blue-500/50 transition-all hover:-translate-y-1">
+                <div className="w-auto inline-flex px-3 h-12 bg-orange-500/10 text-orange-400 rounded-2xl items-center justify-center gap-2 mb-6">
+                  <Music2 size={24} />
+                  <Camera size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Mengelola Akun Media Sosial</h3>
+                <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                  Mengelola akun media sosial instagram @triguna_dharma dan akun tiktok @cerita.indonesiaai
+                </p>
+                <div className="flex gap-2 text-xs font-medium text-slate-500">
+                  <span target="_blank" className="bg-slate-800 px-2 py-1 rounded"><a href="https://www.instagram.com/triguna_dharma/">Instagram</a></span>
+                  <span target="_blank" className="bg-slate-800 px-2 py-1 rounded"><a href="https://www.tiktok.com/@cerita.indonesiaai">Tiktok</a></span>
+                </div>
+              </div>
+
+              {/* Card 6 */}
+              <div className="bg-slate-900 p-8 rounded-3xl border border-slate-800 hover:border-blue-500/50 transition-all hover:-translate-y-1">
+                <div className="w-auto inline-flex px-3 h-12 bg-red-500/10 text-red-400 rounded-2xl items-center justify-center gap-2 mb-6">
+                  <Video size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Editing Video</h3>
+                <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                  Mengedit video untuk konten media sosial
+                </p>
+                <div className="flex gap-2 text-xs font-medium text-slate-500 mt-4">
+                  <span className="bg-slate-800 px-2 py-1 rounded">Canva</span>
+                  <span className="bg-slate-800 px-2 py-1 rounded">CapCut</span>
+                </div>
+                <div className="flex gap-2 text-xs font-medium text-slate-500 mt-4">
+                  <span className="bg-slate-800 px-2 py-1 rounded">ClipIT WebAPP</span>
                 </div>
               </div>
             </div>
@@ -197,7 +239,7 @@ export default function App() {
             {/* Project 2: Social Media Showcase (Direct Display) */}
             <div className="rounded-3xl bg-slate-900 border border-slate-800 p-8">
               <div className="mb-8">
-                <h3 className="text-3xl font-bold text-white mb-4">Galeri Desain Media Sosial</h3>
+                <h3 className="text-3xl font-bold text-white mb-4">Galeri Desain Media Sosial Instagram</h3>
                 <p className="text-slate-400 text-lg">
                   Kumpulan poster dan flyer promosi. Fokus pada komposisi warna dan tata letak yang harmonis untuk menarik audiens digital.
                 </p>
@@ -231,8 +273,11 @@ export default function App() {
                   <img src="71.webp" alt="Desain 7" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
               </div>
+            </div>
 
-              <div className="mb-8 mt-10">
+            {/* Project 3: Desain Spanduk */}
+            <div className="rounded-3xl bg-slate-900 border border-slate-800 p-4 mt-10">
+              <div className="mb-8">
                 <h3 className="text-3xl font-bold text-white mb-4">Desain Spanduk</h3>
                 <p className="text-slate-400 text-lg">
                   Desain spanduk untuk berbagai acara dan kebutuhan.
@@ -247,6 +292,36 @@ export default function App() {
               </div>
             </div>
 
+            {/* Project 4: Social Media titok Showcase (Direct Display) */}
+            <div className="rounded-3xl bg-slate-900 border border-slate-800 p-8 mt-10">
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-white mb-4">Video dan Analitik Akun Tiktok</h3>
+                <p className="text-slate-400 text-lg">
+                  Kumpulan video clip dan AI yang dibuat menggunakan CLIPIT WebAPP.
+                </p>
+                <div className="flex gap-2 mt-4 text-sm font-medium">
+                  <span className="bg-pink-500/10 text-pink-400 px-3 py-1 rounded-full border border-pink-500/20">CapCut</span>
+                  <span className="bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full border border-cyan-500/20">CLIPIT WebAPP</span>
+                </div>
+              </div>
+
+              {/* Grid untuk menampilkan desain secara langsung */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="aspect-[4/5] rounded-xl overflow-hidden bg-slate-800 border border-slate-700/50 group">
+                  <img src="ttanalitik.webp" alt="tiktok analitik" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <div className="aspect-[4/5] rounded-xl overflow-hidden bg-slate-800 border border-slate-700/50 group">
+                  <video controls playsInline preload="metadata" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <source src="3162.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div className="aspect-[4/5] rounded-xl overflow-hidden bg-slate-800 border border-slate-700/50 group">
+                  <video controls playsInline preload="metadata" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <source src="ttclipit.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -317,7 +392,7 @@ export default function App() {
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">Mari Terhubung!</h2>
           <p className="text-slate-400 mb-10">
-            Punya ide proyek, tawaran kolaborasi, atau sekadar ingin berdiskusi soal data dan teknologi? Kotak masuk saya selalu terbuka.
+            Punya ide proyek, tawaran kolaborasi, atau sekadar ingin berdiskusi soal data dan teknologi? Kotak masuk saya selalu terbuka. atau mau beli produk digital saya seperti ClipIT!? bisa juga. Klik link di bawah ini untuk menghubungi saya.
           </p>
 
           <div className="flex justify-center gap-6 mb-16">
@@ -343,12 +418,16 @@ export default function App() {
                 <path d="M22 12c0 5.523-4.477 10-10 10-1.71 0-3.318-.43-4.733-1.189L2 22l1.248-5.111A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10z"></path>
               </svg>
             </a>
+            {/* Tombol Lynk.id */}
+            <a href="https://lynk.id/ciai" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-purple-500 hover:bg-purple-500/10 transition-all">
+              <ExternalLink size={24} />
+            </a>
           </div>
         </div>
 
         <div className="border-t border-slate-900 pt-8 mt-8 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto text-sm text-slate-500">
           <p>© 2026 Muhammad Joefitra Zaqy, S.Kom., M.Kom. All rights reserved.</p>
-          <p className="mt-2 md:mt-0">Dibuat dengan Next.js & Tailwind CSS.</p>
+          <p className="mt-2 md:mt-0">Dibuat dengan ❤️ oleh Muhammad Joefitra Zaqy.</p>
         </div>
       </footer>
 
