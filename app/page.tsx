@@ -34,8 +34,8 @@ export default function App() {
 
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-xl font-bold tracking-tighter text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+          <div className="text-xl font-bold tracking-tighter text-white shrink-0">
             Joefitra<span className="text-blue-500">.</span>
           </div>
           <div className="hidden md:flex gap-8 text-sm font-medium">
@@ -49,17 +49,17 @@ export default function App() {
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <a
               href="/CV Joefitra.pdf"
               download
-              className="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-full transition-colors border border-slate-700 cursor-pointer"
+              className="px-3 py-1.5 sm:px-5 sm:py-2 bg-slate-800 hover:bg-slate-700 text-white text-xs sm:text-sm font-medium rounded-full transition-colors border border-slate-700 cursor-pointer whitespace-nowrap"
             >
               Download CV
             </a>
             <button
               onClick={() => scrollTo('kontak')}
-              className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-full transition-colors"
+              className="px-3 py-1.5 sm:px-5 sm:py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium rounded-full transition-colors whitespace-nowrap"
             >
               Hubungi Saya
             </button>
