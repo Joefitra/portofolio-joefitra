@@ -49,12 +49,21 @@ export default function App() {
               </button>
             ))}
           </div>
-          <button
-            onClick={() => scrollTo('kontak')}
-            className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-full transition-colors"
-          >
-            Hubungi Saya
-          </button>
+          <div className="flex items-center gap-3">
+            <a
+              href="/CV Joefitra.pdf"
+              download
+              className="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-full transition-colors border border-slate-700 cursor-pointer hidden sm:block"
+            >
+              Download CV
+            </a>
+            <button
+              onClick={() => scrollTo('kontak')}
+              className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-full transition-colors"
+            >
+              Hubungi Saya
+            </button>
+          </div>
         </div>
       </nav>
 
