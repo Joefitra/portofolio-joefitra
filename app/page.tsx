@@ -53,7 +53,7 @@ export default function App() {
             <a
               href="/CV Joefitra.pdf"
               download
-              className="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-full transition-colors border border-slate-700 cursor-pointer hidden sm:block"
+              className="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-full transition-colors border border-slate-700 cursor-pointer"
             >
               Download CV
             </a>
@@ -80,7 +80,7 @@ export default function App() {
             <br /> Menjadi Nyata.
           </h1>
           <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed">
-            Halo, saya <span className="text-white font-medium">Muhammad Joefitra Zaqy, S.Kom., M.Kom.</span>.
+            Halo, saya <span className="text-white font-medium">Muhammad Joefitra Zaqy, S.Kom., M.Kom</span>.
             Saya memadukan keahlian lintas disiplin: mulai dari mendesain visual kreatif, web coding, menulis riset ilmu komputer, hingga mengajar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
