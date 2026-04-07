@@ -14,127 +14,11 @@ import {
   Mail,
   ChevronDown,
   BookOpen,
-  Globe,
   useLucideContext
 } from 'lucide-react';
 
-const translations = {
-  id: {
-    nav: ['Beranda', 'Keahlian', 'Karya', 'Publikasi'],
-    navIds: ['beranda', 'keahlian', 'karya', 'publikasi'],
-    downloadCv: 'Download CV',
-    contactBtn: 'Hubungi Saya',
-    heroBadge: 'S1 Sistem Informasi & S2 Teknologi Informasi 🎓',
-    heroTitle1: 'Mengubah Ide',
-    heroTitle2: 'Menjadi Nyata.',
-    heroIntro1: 'Halo, saya ',
-    heroIntro2: 'Muhammad Joefitra Zaqy, S.Kom., M.Kom',
-    heroIntro3: '. Saya memadukan keahlian lintas disiplin: mulai dari mendesain visual kreatif, web coding, menulis riset ilmu komputer, hingga mengajar.',
-    heroBtn1: 'Lihat Karya Saya',
-    heroBtn2: 'Jelajahi Keahlian',
-    skillsSectionTitle: 'Apa yang Saya Lakukan',
-    skillsSectionDesc: 'Pendekatan multidisiplin untuk menyelesaikan masalah melalui desain, kode, data, dan edukasi.',
-    skill1Title: 'Desain Visual',
-    skill1Desc: '"Visual yang menarik, pesan yang sampai." Pendekatan praktis fokus pada estetika dan tata letak yang harmonis.',
-    skill2Title: 'Web Development',
-    skill2Desc: '"Membangun produk cerdas." Mengembangkan web responsif dan memanfaatkan AI-assisted coding untuk efisiensi.',
-    skill3Title: 'Riset & Analisis',
-    skill3Desc: '"Menerjemahkan data menjadi solusi." Merumuskan solusi berbasis data melalui algoritma tingkat lanjut.',
-    skill4Title: 'Edukasi & Mentor',
-    skill4Desc: '"Mentransfer pengetahuan." Mengajar ilmu komputer dengan metode hybrid agar materi mudah dipraktikkan.',
-    skill4Tags: ['Mahasiswa S1', 'Hybrid Method'],
-    skill5Title: 'Mengelola Akun Media Sosial',
-    skill5Desc: 'Mengelola akun media sosial instagram @triguna_dharma dan akun tiktok @cerita.indonesiaai',
-    skill6Title: 'Editing Video',
-    skill6Desc: 'Mengedit video untuk konten media sosial',
-    projectsSectionTitle: 'Karya Unggulan',
-    projectsSectionDesc: 'Beberapa proyek web dan hasil desain yang telah saya kerjakan.',
-    project1Desc: 'Platform ekstraksi video cerdas untuk media sosial. Mengintegrasikan kecerdasan API Groq dan Gemini untuk menganalisis video panjang dan menemukan momen-momen yang paling berpotensi viral secara otomatis.',
-    project2Title: 'Galeri Desain Media Sosial Instagram',
-    project2Desc: 'Kumpulan poster dan flyer promosi. Fokus pada komposisi warna dan tata letak yang harmonis untuk menarik audiens digital.',
-    project3Title: 'Desain Spanduk',
-    project3Desc: 'Desain spanduk untuk berbagai acara dan kebutuhan.',
-    project4Title: 'Video dan Analitik Akun Tiktok',
-    project4Desc: 'Kumpulan video clip dan AI yang dibuat menggunakan CLIPIT WebAPP.',
-    pubSectionTitle: 'Jurnal & Publikasi Sinta',
-    pubSectionDesc: 'Rekam jejak penelitian di bidang ilmu komputer dan algoritma cerdas.',
-    pubRead: 'Baca Jurnal',
-    pub1Date: 'Tahun Terbit July 2024',
-    pub1Title: 'Analysis of Indonesian Netizen Sentiment on Platform X Regarding the Arrival of Refugees in Indonesia Using the Multinominal Naive Bayes Method',
-    pub1Desc: 'Penelitian ini berfokus untuk menganalisis sentimen netizen Indonesia terhadap kedatangan pengungsi di Indonesia pada plaform x (twitter)',
-    pub2Title: 'Implementasi Data Mining Untuk Memprediksi Penjualan Toko Roti Menggunakan Regresi Linier Berganda',
-    pub2Date: 'Tahun Terbit July 2023',
-    pub2Desc: 'Penelitian ini bertujuan untuk memprediksi penjualan toko roti',
-    pub3Title: 'Sistem Pendukung Keputusan Dalam Rekrutmen Tim Digital Marketing Di PT. Inti Edukasi Internasional Menggunakan Metode ARAS(Additive Ratio Assesment)',
-    pub3Date: 'Tahun Terbit Oktober 2023',
-    pub3Desc: 'Penelitian ini bertujuan membantu dalam proses rekrutmen tim digital marketing di PT. Inti Edukasi Internasional',
-    contactTitle: 'Mari Terhubung!',
-    contactDesc: 'Punya ide proyek, tawaran kolaborasi, atau sekadar ingin berdiskusi soal data dan teknologi? Kotak masuk saya selalu terbuka. atau mau beli produk digital saya seperti ClipIT!? bisa juga. Klik link di bawah ini untuk menghubungi saya.',
-    footerCredits: 'Dibuat dengan ❤️ oleh Muhammad Joefitra Zaqy.',
-    footerCopyright: '© 2026 Muhammad Joefitra Zaqy, S.Kom., M.Kom. All rights reserved.'
-  },
-  en: {
-    nav: ['Home', 'Skills', 'Projects', 'Publications'],
-    navIds: ['beranda', 'keahlian', 'karya', 'publikasi'],
-    downloadCv: 'Download CV',
-    contactBtn: 'Contact Me',
-    heroBadge: 'BSc in Information Systems & MSc in IT 🎓',
-    heroTitle1: 'Transforming Ideas',
-    heroTitle2: 'Into Reality.',
-    heroIntro1: 'Hello, I am ',
-    heroIntro2: 'Muhammad Joefitra Zaqy, S.Kom., M.Kom',
-    heroIntro3: '. I combine cross-disciplinary skills: from designing creative visuals, web coding, writing computer science research, to teaching.',
-    heroBtn1: 'View My Work',
-    heroBtn2: 'Explore Skills',
-    skillsSectionTitle: 'What I Do',
-    skillsSectionDesc: 'A multidisciplinary approach to solving problems through design, code, data, and education.',
-    skill1Title: 'Visual Design',
-    skill1Desc: '"Compelling visuals, delivered message." A practical approach focused on aesthetics and harmonious layouts.',
-    skill2Title: 'Web Development',
-    skill2Desc: '"Building smart products." Developing responsive webs and leveraging AI-assisted coding for efficiency.',
-    skill3Title: 'Research & Analysis',
-    skill3Desc: '"Translating data into solutions." Formulating data-driven solutions through advanced algorithms.',
-    skill4Title: 'Education & Mentoring',
-    skill4Desc: '"Transferring knowledge." Teaching computer science with a hybrid method to make materials practical.',
-    skill4Tags: ['Undergraduate Students', 'Hybrid Method'],
-    skill5Title: 'Social Media Management',
-    skill5Desc: 'Managing Instagram account @triguna_dharma and TikTok account @cerita.indonesiaai',
-    skill6Title: 'Video Editing',
-    skill6Desc: 'Editing videos for social media content',
-    projectsSectionTitle: 'Featured Projects',
-    projectsSectionDesc: 'Several web projects and design works I have completed.',
-    project1Desc: 'Smart video extraction platform for social media. Integrating Groq and Gemini API intelligence to automatically analyze long videos and find potentially viral moments.',
-    project2Title: 'Instagram Social Media Design Gallery',
-    project2Desc: 'A collection of promotional posters and flyers. Focusing on color composition and harmonious layout to attract digital audiences.',
-    project3Title: 'Banner Design',
-    project3Desc: 'Banner designs for various events and needs.',
-    project4Title: 'TikTok Videos and Analytics',
-    project4Desc: 'A collection of video clips and AI content created using CLIPIT WebAPP.',
-    pubSectionTitle: 'Journals & SINTA Publications',
-    pubSectionDesc: 'Track record of research in computer science and intelligent algorithms.',
-    pubRead: 'Read Journal',
-    pub1Date: 'Published July 2024',
-    pub1Title: 'Analysis of Indonesian Netizen Sentiment on Platform X Regarding the Arrival of Refugees in Indonesia Using the Multinominal Naive Bayes Method',
-    pub1Desc: 'This research focuses on analyzing the sentiment of Indonesian netizens towards the arrival of refugees in Indonesia on platform X (formerly Twitter).',
-    pub2Title: 'Implementation of Data Mining to Predict Bakery Sales Using Multiple Linear Regression',
-    pub2Date: 'Published July 2023',
-    pub2Desc: 'This study aims to predict bakery sales.',
-    pub3Title: 'Decision Support System in Digital Marketing Team Recruitment at PT. Inti Edukasi Internasional Using ARAS Method',
-    pub3Date: 'Published October 2023',
-    pub3Desc: 'This study aims to assist in the recruitment process of the digital marketing team at PT. Inti Edukasi Internasional.',
-    contactTitle: 'Let\'s Connect!',
-    contactDesc: 'Have a project idea, collaboration offer, or just want to discuss data and technology? My inbox is always open. Or want to buy my digital products like ClipIT!? That\'s possible too. Click the links below to contact me.',
-    footerCredits: 'Made with ❤️ by Muhammad Joefitra Zaqy.',
-    footerCopyright: '© 2026 Muhammad Joefitra Zaqy. All rights reserved.'
-  }
-};
-
-type Language = 'id' | 'en';
-
 export default function App() {
   const [activeSection, setActiveSection] = useState('beranda');
-  const [lang, setLang] = useState<Language>('id');
-  const t = translations[lang];
 
   // Smooth scroll handler
   const scrollTo = (id: string) => {
@@ -155,10 +39,10 @@ export default function App() {
             Joefitra<span className="text-blue-500">.</span>
           </div>
           <div className="hidden md:flex gap-8 text-sm font-medium">
-            {t.nav.map((item, idx) => (
+            {['Beranda', 'Keahlian', 'Karya', 'Publikasi'].map((item) => (
               <button
                 key={item}
-                onClick={() => scrollTo(t.navIds[idx])}
+                onClick={() => scrollTo(item.toLowerCase())}
                 className="hover:text-blue-400 transition-colors"
               >
                 {item}
@@ -166,40 +50,18 @@ export default function App() {
             ))}
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
-            {/* Language Toggle */}
-            <button
-              onClick={() => setLang(lang === 'id' ? 'en' : 'id')}
-              className={`group relative overflow-hidden px-2 py-1.5 sm:px-3 sm:py-2 text-white text-xs sm:text-sm font-medium rounded-full transition-all duration-300 border flex items-center gap-1.5 hover:scale-105 active:scale-95 ${lang === 'id' ? 'bg-slate-800 border-slate-700 hover:bg-slate-700' : 'bg-slate-800/80 border-blue-500/50 shadow-[0_0_15px_rgba(59,130,246,0.2)]'}`}
-            >
-              {/* Animated Background Highlight */}
-              <div className={`absolute inset-0 bg-gradient-to-r from-blue-500/20 to-emerald-500/20 transition-opacity duration-500 ${lang === 'en' ? 'opacity-100' : 'opacity-0'}`}></div>
-
-              <Globe
-                size={16}
-                className={`relative z-10 transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${lang === 'en' ? 'rotate-[360deg] text-blue-400' : 'rotate-0 text-slate-300 group-hover:rotate-45'}`}
-              />
-
-              {/* Sliding Text Animation */}
-              <span className="hidden sm:block relative z-10 w-[20px] overflow-hidden h-[20px]">
-                <span className={`absolute left-0 top-0 w-full flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${lang === 'en' ? '-translate-y-[20px]' : 'translate-y-0'}`}>
-                  <span className="h-[20px] flex items-center justify-center font-bold">EN</span>
-                  <span className="h-[20px] flex items-center justify-center text-blue-400 font-bold">ID</span>
-                </span>
-              </span>
-            </button>
-
             <a
               href="/CV Joefitra.pdf"
               download
               className="px-3 py-1.5 sm:px-5 sm:py-2 bg-slate-800 hover:bg-slate-700 text-white text-xs sm:text-sm font-medium rounded-full transition-colors border border-slate-700 cursor-pointer whitespace-nowrap"
             >
-              {t.downloadCv}
+              Download CV
             </a>
             <button
               onClick={() => scrollTo('kontak')}
               className="px-3 py-1.5 sm:px-5 sm:py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium rounded-full transition-colors whitespace-nowrap"
             >
-              {t.contactBtn}
+              Hubungi Saya
             </button>
           </div>
         </div>
@@ -209,30 +71,30 @@ export default function App() {
         {/* Hero Section */}
         <section id="beranda" className="pt-40 pb-20 px-6 min-h-[90vh] flex flex-col justify-center items-center text-center">
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium">
-            {t.heroBadge}
+            S1 Sistem Informasi & S2 Teknologi Informasi 🎓
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 max-w-4xl leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-              {t.heroTitle1}
+              Mengubah Ide
             </span>
-            <br /> {t.heroTitle2}
+            <br /> Menjadi Nyata.
           </h1>
           <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed">
-            {t.heroIntro1}<span className="text-white font-medium">{t.heroIntro2}</span>
-            {t.heroIntro3}
+            Halo, saya <span className="text-white font-medium">Muhammad Joefitra Zaqy, S.Kom., M.Kom</span>.
+            Saya memadukan keahlian lintas disiplin: mulai dari mendesain visual kreatif, web coding, menulis riset ilmu komputer, hingga mengajar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={() => scrollTo('karya')}
               className="flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-slate-900 font-semibold rounded-full hover:bg-slate-200 transition-colors"
             >
-              {t.heroBtn1} <ArrowRight size={18} />
+              Lihat Karya Saya <ArrowRight size={18} />
             </button>
             <button
               onClick={() => scrollTo('keahlian')}
               className="flex items-center justify-center gap-2 px-8 py-3.5 bg-slate-800 text-white font-semibold rounded-full hover:bg-slate-700 transition-colors border border-slate-700"
             >
-              {t.heroBtn2} <ChevronDown size={18} />
+              Jelajahi Keahlian <ChevronDown size={18} />
             </button>
           </div>
         </section>
@@ -241,8 +103,8 @@ export default function App() {
         <section id="keahlian" className="py-24 px-6 bg-slate-900/50 border-y border-slate-800/50">
           <div className="max-w-6xl mx-auto">
             <div className="mb-16 md:text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t.skillsSectionTitle}</h2>
-              <p className="text-slate-400 max-w-2xl mx-auto">{t.skillsSectionDesc}</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Apa yang Saya Lakukan</h2>
+              <p className="text-slate-400 max-w-2xl mx-auto">Pendekatan multidisiplin untuk menyelesaikan masalah melalui desain, kode, data, dan edukasi.</p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -251,9 +113,9 @@ export default function App() {
                 <div className="w-12 h-12 bg-purple-500/10 text-purple-400 rounded-2xl flex items-center justify-center mb-6">
                   <Palette size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{t.skill1Title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Desain Visual</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                  {t.skill1Desc}
+                  "Visual yang menarik, pesan yang sampai." Pendekatan praktis fokus pada estetika dan tata letak yang harmonis.
                 </p>
                 <div className="flex gap-2 text-xs font-medium text-slate-500">
                   <span className="bg-slate-800 px-2 py-1 rounded">Canva</span>
@@ -266,9 +128,9 @@ export default function App() {
                 <div className="w-12 h-12 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center mb-6">
                   <Code size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{t.skill2Title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Web Development</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                  {t.skill2Desc}
+                  "Membangun produk cerdas." Mengembangkan web responsif dan memanfaatkan AI-assisted coding untuk efisiensi.
                 </p>
                 <div className="flex gap-2 text-xs font-medium text-slate-500">
                   <span className="bg-slate-800 px-2 py-1 rounded">Next.js</span>
@@ -281,9 +143,9 @@ export default function App() {
                 <div className="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
                   <LineChart size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{t.skill3Title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Riset & Analisis</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                  {t.skill3Desc}
+                  "Menerjemahkan data menjadi solusi." Merumuskan solusi berbasis data melalui algoritma tingkat lanjut.
                 </p>
                 <div className="flex flex-wrap gap-2 text-xs font-medium text-slate-500">
                   <span className="bg-slate-800 px-2 py-1 rounded">Machine Learning</span>
@@ -301,13 +163,13 @@ export default function App() {
                 <div className="w-12 h-12 bg-orange-500/10 text-orange-400 rounded-2xl flex items-center justify-center mb-6">
                   <GraduationCap size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{t.skill4Title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Edukasi & Mentor</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                  {t.skill4Desc}
+                  "Mentransfer pengetahuan." Mengajar ilmu komputer dengan metode hybrid agar materi mudah dipraktikkan.
                 </p>
                 <div className="flex gap-2 text-xs font-medium text-slate-500">
-                  <span className="bg-slate-800 px-2 py-1 rounded">{t.skill4Tags[0]}</span>
-                  <span className="bg-slate-800 px-2 py-1 rounded">{t.skill4Tags[1]}</span>
+                  <span className="bg-slate-800 px-2 py-1 rounded">Mahasiswa S1</span>
+                  <span className="bg-slate-800 px-2 py-1 rounded">Hybrid Method</span>
                 </div>
               </div>
 
@@ -317,9 +179,9 @@ export default function App() {
                   <Music2 size={24} />
                   <Camera size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{t.skill5Title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Mengelola Akun Media Sosial</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                  {t.skill5Desc}
+                  Mengelola akun media sosial instagram @triguna_dharma dan akun tiktok @cerita.indonesiaai
                 </p>
                 <div className="flex gap-2 text-xs font-medium text-slate-500">
                   <span className="bg-slate-800 px-2 py-1 rounded"><a href="https://www.instagram.com/triguna_dharma/" target="_blank">Instagram</a></span>
@@ -332,9 +194,9 @@ export default function App() {
                 <div className="w-auto inline-flex px-3 h-12 bg-red-500/10 text-red-400 rounded-2xl items-center justify-center gap-2 mb-6">
                   <Video size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{t.skill6Title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Editing Video</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                  {t.skill6Desc}
+                  Mengedit video untuk konten media sosial
                 </p>
                 <div className="flex gap-2 text-xs font-medium text-slate-500 mt-4">
                   <span className="bg-slate-800 px-2 py-1 rounded">Canva</span>
@@ -352,13 +214,14 @@ export default function App() {
         <section id="karya" className="py-24 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t.projectsSectionTitle}</h2>
-              <p className="text-slate-400 max-w-2xl">{t.projectsSectionDesc}</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Karya Unggulan</h2>
+              <p className="text-slate-400 max-w-2xl">Beberapa proyek web dan hasil desain yang telah saya kerjakan.</p>
             </div>
 
             {/* Project 1: CLIPIT! */}
             <div className="group rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 flex flex-col md:flex-row mb-12">
               <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden bg-slate-800">
+                {/* Ganti URL src ini dengan screenshot CLIPIT! milikmu */}
                 <img
                   src="clipit.webp"
                   alt="Screenshot CLIPIT! Web App"
@@ -371,7 +234,7 @@ export default function App() {
                   <h3 className="text-3xl font-bold text-white">CLIPIT! Web App</h3>
                 </div>
                 <p className="text-slate-400 mb-6 text-lg">
-                  {t.project1Desc}
+                  Platform ekstraksi video cerdas untuk media sosial. Mengintegrasikan kecerdasan API Groq dan Gemini untuk menganalisis video panjang dan menemukan momen-momen yang paling berpotensi viral secara otomatis.
                 </p>
                 <div className="flex flex-wrap gap-2 text-sm font-medium">
                   <span className="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20">Next.js</span>
@@ -385,9 +248,9 @@ export default function App() {
             {/* Project 2: Social Media Showcase (Direct Display) */}
             <div className="rounded-3xl bg-slate-900 border border-slate-800 p-8">
               <div className="mb-8">
-                <h3 className="text-3xl font-bold text-white mb-4">{t.project2Title}</h3>
+                <h3 className="text-3xl font-bold text-white mb-4">Galeri Desain Media Sosial Instagram</h3>
                 <p className="text-slate-400 text-lg">
-                  {t.project2Desc}
+                  Kumpulan poster dan flyer promosi. Fokus pada komposisi warna dan tata letak yang harmonis untuk menarik audiens digital.
                 </p>
                 <div className="flex gap-2 mt-4 text-sm font-medium">
                   <span className="bg-pink-500/10 text-pink-400 px-3 py-1 rounded-full border border-pink-500/20">Canva</span>
@@ -397,6 +260,7 @@ export default function App() {
 
               {/* Grid untuk menampilkan desain secara langsung */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Ganti URL src pada masing-masing img tag dengan gambar aslimu */}
                 <div className="aspect-[4/5] rounded-xl overflow-hidden bg-slate-800 border border-slate-700/50 group">
                   <img src="44.webp" alt="Desain 1" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
@@ -423,9 +287,9 @@ export default function App() {
             {/* Project 3: Desain Spanduk */}
             <div className="rounded-3xl bg-slate-900 border border-slate-800 p-4 mt-10">
               <div className="mb-8">
-                <h3 className="text-3xl font-bold text-white mb-4">{t.project3Title}</h3>
+                <h3 className="text-3xl font-bold text-white mb-4">Desain Spanduk</h3>
                 <p className="text-slate-400 text-lg">
-                  {t.project3Desc}
+                  Desain spanduk untuk berbagai acara dan kebutuhan.
                 </p>
                 <div className="flex gap-2 mt-4 text-sm font-medium">
                   <span className="bg-pink-500/10 text-pink-400 px-3 py-1 rounded-full border border-pink-500/20">Canva</span>
@@ -440,9 +304,9 @@ export default function App() {
             {/* Project 4: Social Media titok Showcase (Direct Display) */}
             <div className="rounded-3xl bg-slate-900 border border-slate-800 p-8 mt-10">
               <div className="mb-8">
-                <h3 className="text-3xl font-bold text-white mb-4">{t.project4Title}</h3>
+                <h3 className="text-3xl font-bold text-white mb-4">Video dan Analitik Akun Tiktok</h3>
                 <p className="text-slate-400 text-lg">
-                  {t.project4Desc}
+                  Kumpulan video clip dan AI yang dibuat menggunakan CLIPIT WebAPP.
                 </p>
                 <div className="flex gap-2 mt-4 text-sm font-medium">
                   <span className="bg-pink-500/10 text-pink-400 px-3 py-1 rounded-full border border-pink-500/20">CapCut</span>
@@ -476,8 +340,8 @@ export default function App() {
             <div className="w-16 h-16 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <BookOpen size={32} />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t.pubSectionTitle}</h2>
-            <p className="text-slate-400">{t.pubSectionDesc}</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Jurnal & Publikasi Sinta</h2>
+            <p className="text-slate-400">Rekam jejak penelitian di bidang ilmu komputer dan algoritma cerdas.</p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6">
@@ -486,14 +350,14 @@ export default function App() {
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-xs font-bold px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded">SINTA ACCREDITED</span>
-                  <span className="text-sm text-slate-500 font-medium">{t.pub1Date}</span>
+                  <span className="text-sm text-slate-500 font-medium">Tahun Terbit July 2024</span>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">{t.pub1Title}</h3>
-                <p className="text-slate-400 text-sm line-clamp-2">{t.pub1Desc}</p>
+                <h3 className="text-lg font-bold text-white mb-2">Analysis of Indonesian Netizen Sentiment on Platform X Regarding the Arrival of Refugees in Indonesia Using the Multinominal Naive Bayes Method</h3>
+                <p className="text-slate-400 text-sm line-clamp-2">Penelitian ini berfokus untuk menganalisis sentimen netizen Indonesia terhadap kedatangan pengungsi di Indonesia pada plaform x (twitter)</p>
               </div>
 
               <button onClick={() => window.open('https://shorturl.at/irOZn')} className="shrink-0 flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300">
-                {t.pubRead} <ArrowRight size={16} />
+                Baca Jurnal <ArrowRight size={16} />
               </button>
             </div>
 
@@ -502,13 +366,13 @@ export default function App() {
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-xs font-bold px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded">SINTA ACCREDITED</span>
-                  <span className="text-sm text-slate-500 font-medium">{t.pub2Date}</span>
+                  <span className="text-sm text-slate-500 font-medium">Tahun Terbit July 2023</span>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">{t.pub2Title}</h3>
-                <p className="text-slate-400 text-sm line-clamp-2">{t.pub2Desc}</p>
+                <h3 className="text-lg font-bold text-white mb-2">Implementasi Data Mining Untuk Memprediksi Penjualan Toko Roti Menggunakan Regresi Linier Berganda</h3>
+                <p className="text-slate-400 text-sm line-clamp-2">Penelitian ini bertujuan untuk memprediksi penjualan toko roti</p>
               </div>
               <button onClick={() => window.open('https://shorturl.at/Xhieo')} className="shrink-0 flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300">
-                {t.pubRead} <ArrowRight size={16} />
+                Baca Jurnal <ArrowRight size={16} />
               </button>
             </div>
 
@@ -518,13 +382,13 @@ export default function App() {
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-xs font-bold px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded">SINTA ACCREDITED</span>
-                  <span className="text-sm text-slate-500 font-medium">{t.pub3Date}</span>
+                  <span className="text-sm text-slate-500 font-medium">Tahun Terbit Oktober 2023</span>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">{t.pub3Title}</h3>
-                <p className="text-slate-400 text-sm line-clamp-2">{t.pub3Desc}</p>
+                <h3 className="text-lg font-bold text-white mb-2">Sistem Pendukung Keputusan Dalam Rekrutmen Tim Digital Marketing Di PT. Inti Edukasi Internasional Menggunakan Metode ARAS(Additive Ratio Assesment)</h3>
+                <p className="text-slate-400 text-sm line-clamp-2">Penelitian ini bertujuan membantu dalam proses rekrutmen tim digital marketing di PT. Inti Edukasi Internasional</p>
               </div>
               <button onClick={() => window.open('https://shorturl.at/nxgyB')} className="shrink-0 flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300">
-                {t.pubRead} <ArrowRight size={16} />
+                Baca Jurnal <ArrowRight size={16} />
               </button>
             </div>
           </div>
@@ -535,9 +399,9 @@ export default function App() {
       {/* Footer / Contact */}
       <footer id="kontak" className="bg-slate-950 border-t border-slate-800 pt-20 pb-10 px-6 text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-6">{t.contactTitle}</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">Mari Terhubung!</h2>
           <p className="text-slate-400 mb-10">
-            {t.contactDesc}
+            Punya ide proyek, tawaran kolaborasi, atau sekadar ingin berdiskusi soal data dan teknologi? Kotak masuk saya selalu terbuka. atau mau beli produk digital saya seperti ClipIT!? bisa juga. Klik link di bawah ini untuk menghubungi saya.
           </p>
 
           <div className="flex justify-center gap-6 mb-16">
@@ -571,8 +435,8 @@ export default function App() {
         </div>
 
         <div className="border-t border-slate-900 pt-8 mt-8 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto text-sm text-slate-500">
-          <p>{t.footerCopyright}</p>
-          <p className="mt-2 md:mt-0">{t.footerCredits}</p>
+          <p>© 2026 Muhammad Joefitra Zaqy, S.Kom., M.Kom. All rights reserved.</p>
+          <p className="mt-2 md:mt-0">Dibuat dengan ❤️ oleh Muhammad Joefitra Zaqy.</p>
         </div>
       </footer>
 
